@@ -1,257 +1,380 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="GenSAM_logo.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-67FLDMD8N5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-67FLDMD8N5');
+</script>
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="GenSAM_logo.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Tag Manager -->
+<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K8HMHBT');</script> -->
+  <!-- End Google Tag Manager -->
 
+  <!-- head -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Temporal Alignment Networks for Long-term Video, TAN">
+  <meta name="description" content="Temporal Alignment Networks for Long-term Video. Tengda Han, Weidi Xie, Andrew Zisserman. CVPR 2022">
+  <title>Temporal Alignment Networks for Long-term Video</title>
 
-  <title>Generalizable SAM</title>
-  <link rel="icon" type="image/x-icon" href="GenSAM_logo.png">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+  <script type="text/javascript">google.load("jquery", "1.3.2");</script>
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" type="text/css" href="assets/text_0804.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+  <meta property="og:image" content="asset/TAN_teaser.png">
+  <meta property="og:title" content="Temporal Alignment Networks for Long-term Video, CVPR 2022">
 </head>
+
+
 <body>
 
+  <!-- Google Tag Manager (noscript) -->
+<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8HMHBT"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+  <!-- End Google Tag Manager (noscript) -->
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Leveraging Hallucinations to Reduce Manual Prompt Dependency in Promptable Segmentation</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="https://lwpyh.github.io/" target="_blank">Jian Hu</sup>,</span>
-                <span class="author-block">
-                  <a href="https://jylin8100.github.io/" target="_blank">Jiayi Lin</sup>,</span>
-                  <span class="author-block">
-                    <a href="https://thinklab.sjtu.edu.cn/" target="_blank">Junchi Yan</a>,</span>
-                  <span class="author-block">
-                    <a href="http://www.eecs.qmul.ac.uk/~sgg/" target="_blank">Shaogang Gong</a>
-                  </span>
-                  </div>
+<br>
+<center>
+  <span style="font-size:34px"> 
+  Temporal Alignment Networks for Long-term Video </span></center>
+  <br>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Queen Mary University of London, Shanghai Jiao Tong University<br>
-                  </div>
+  <table align=center width=600px>
+    <tbody><tr>
+      <td align=center width=120px>
+        <center>
+          <span style="font-size:22px">
+            <a href="https://tengdahan.github.io" target="_blank">Tengda Han
+            </a><sup>1</sup></span>
+        </center>
+      </td>
+      <td align=center width=120px>
+        <center>
+          <span style="font-size:22px">
+            <a href="https://weidixie.github.io/" target="_blank">Weidi Xie
+            </a><sup>1,2</sup></span>
+        </center>
+      </td>
+      <td align=center width=140px>
+        <center>
+          <span style="font-size:22px">
+            <a href="http://www.robots.ox.ac.uk/~az" target="_blank">Andrew Zisserman
+          </a><sup>1</sup></span>
+        </center>
+      </td>
+    </tr></tbody>
+  </table>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                     <!-- ArXiv abstract Link -->
-                    <span class="link-block">
-                    <a href="https://arxiv.org/abs/2312.07374" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                    </a>
-                    </span>
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/jyLin8100/GenSAM" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-            </div>
+  <table align=center width=800px>
+    <tbody><tr>
+    <td align=center width=800px>
+      <center>
+        <span style="font-size:20px">
+        <sup>1</sup>Visual Geometry Group, University of Oxford  &nbsp&nbsp
+        <sup>2</sup>Shanghai Jiao Tong University</span><br></br>
+      </center>
+    </td></tr>
+    <tr>
+    <td align=center width=800px>
+      <center>
+        <div style="font-size:20px">{htd,weidi,az}@robots.ox.ac.uk</div>
+      </center>
+    </td>
+    </tr>
+  </table>
+
+  <br>
+    <center>
+      <div class="container">
+        <div class="row">
+          <center>
+            <img src="assets/TAN_teaser.png" alt="temporal-alignment-network-figure" style="width: 100%; object-fit: cover; max-width:100%;"></a>
+          </center>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <style>
-            .content {
-              font-family: "Times New Roman", Times, serif;
-            }
-          </style>
-          <p>
-            Camouflaged object detection (COD) approaches heavily rely on pixel-level annotated datasets. Weakly-supervised COD (WSCOD) approaches use sparse annotations like scribbles or points to reduce annotation effort, but this can lead to decreased accuracy. 
-            The Segment Anything Model (SAM) shows remarkable segmentation ability with sparse prompts like points. However, manual prompt is not always feasible, as it may not be accessible in real-world application. Additionally, it only provides localization information instead of semantic one, which can intrinsically cause ambiguity in interpreting the targets. In this work, we aim to eliminate the need for manual prompt. The key idea is to employ Cross-modal Chains of Thought Prompting (CCTP) to reason visual prompts using the semantic information given by a generic text prompt. To that end, we introduce a test-time adaptation per-instance mechanism called Generalizable SAM (GenSAM) to automatically generate and optimize visual prompts the generic task prompt for WSCOD. In particular, CCTP maps a single generic text prompt onto image-specific consensus foreground and background heatmaps using vision-language models, acquiring reliable visual prompts. Moreover, to test-time adapt the visual prompts, we further propose Progressive Mask Generation (PMG) to iteratively reweight the input image, guiding the model to focus on the targets in a coarse-to-fine manner. Crucially, all network parameters are fixed, avoiding the need for additional training. Experiments demonstrate the superiority of GenSAM. Experiments on three benchmarks demonstrate that GenSAM outperforms point supervision approaches and achieves comparable results to scribble supervision ones, solely relying on general task descriptions as prompts.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-  <!-- Demo video-->
-<div class="container is-max-desktop" style="width: 150%;">
-  <div class="hero-body">
-    <video width="100%" autoplay controls muted loop>
-      <!-- Your video here -->
-      <source src="demo_show.mp4" type="video/mp4">
-    </video>
-    <h2 class="subtitle has-text-centered">
-        Demo of our proposed GenSAM. 
-      </h2>
-  </div>
+    </center>
+  </center>
+            
+<hr>
+<center><h1>Abstract</h1></center>
+<div align="justify">
+  <p>
+The objective of this paper is a temporal alignment network 
+that ingests long term video sequences, and associated text sentences, 
+in order to: (1) determine if a sentence
+is alignable with the video; and (2) if it is alignable, then
+determine its alignment. The challenge is to train such
+networks from large-scale datasets, such as HowTo100M,
+where the associated text sentences have significant noise,
+and are only weakly aligned when relevant.</p>
+<p>Apart from proposing the alignment network, we also
+make four contributions: (i) we describe a
+novel co-training method that enables to denoise and train on
+raw instructional videos without using manual annotation,
+despite the considerable noise; (ii) to benchmark the alignment 
+performance, we manually curate a 10-hour subset of
+HowTo100M, totalling 80 videos, with sparse temporal descriptions. 
+Our proposed model, trained on HowTo100M,
+outperforms strong baselines (CLIP, MIL-NCE) on this
+alignment dataset by a significant margin; (iii) we apply the
+trained model in the zero-shot settings to multiple down-stream 
+video understanding tasks and achieve state-of-the-art 
+results, including text-video retrieval on YouCook2, and
+weakly supervised video action segmentation on Breakfast-Action;
+(iv) we use the automatically-aligned HowTo100M annotations for end-to-end finetuning
+of the backbone model, and obtain improved performance on downstream action recognition tasks.</p>
 </div>
-<!-- End demo video -->
+<br>
 
-  <!-- Demo video-->
-<div class="container is-max-desktop" style="width: 150%;">
-  <div class="hero-body">
-    <video width="100%" autoplay controls muted loop>
-      <!-- Your video here -->
-      <source src="framework.mp4" type="video/mp4">
-    </video>
-    <h2 class="subtitle has-text-centered">
-        This video shows how our framework works. 
-      </h2>
-  </div>
-</div>
-<!-- End demo video -->
-  
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <!-- Your image here -->
-          <div style="display: flex; justify-content: center; align-items: center;">
-          <img src="static/images/AIG_framework_v3.png" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 30px;"/>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            Framework of our GenSAM
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="static/images/supp_cod.png" alt="MY ALT TEXT" style="width: 780px; height: auto; margin-top: -15px;"/>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            Example images on COD tasks
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="static/images/supp_other.png" alt="MY ALT TEXT" style="width: 800px; height: auto;"/>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            Example images on COD tasks
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="static/images/result1.png" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 60px;"/>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            Experiment Results.
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End image carousel -->
+<!-- <hr> -->
+<!-- <center><h1>Video</h1></center> -->
+     <!-- <center>
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/oMcd6maQgQk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     </center> -->
+<!-- <br> -->
 
-  <!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
+<hr>
+<center><h1>Publications</h1></center>
 
-      <iframe  src="poster_GenSAM.pdf" width="100%" height="550">
-          </iframe>      
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-  
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{hu2023relax,
-      title={Relax Image-Specific Prompt Requirement in SAM: A Single Generic Prompt for Segmenting Camouflaged Objects}, 
-      author={Jian Hu and Jiayi Lin and Weitong Cai and Shaogang Gong},
-      year={2023},
-      eprint={2312.07374},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
+<script type="text/javascript">
+function show_hide(eid) {
+    var x = document.getElementById(eid);
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+</script>
+
+    <table align="center" width=700px>
+          <tr>
+                <td>
+                    <a href=""><img class="layered-paper-big" style="height:175px" src="./assets/TAN_page1.png"/></a>
+                </td>
+
+                <td width=500px>
+                    <span style="font-size:18px">
+                    <div class="title">
+                    <b>Temporal Alignment Networks for Long-term Video.</b>
+                    </div>
+
+                    <div class="authors">
+                    Tengda Han,
+                    Weidi Xie,
+                    Andrew Zisserman
+                    </div>
+
+                    <div class="conf">
+                    [Oral] CVPR, 2022
+                    </div>
+
+                    <div class="links">
+                    <a href="javascript:;" onclick="show_hide('BibHan22')"> Bibtex </a> 
+                   | <a href="https://www.robots.ox.ac.uk/~vgg/publications/2022/Han22a/han22a.pdf"> PDF </a> 
+                   | <a href="https://arxiv.org/abs/2204.02968"> arXiv </a>
+                   | <a href="https://github.com/TengdaHan/TemporalAlignNet"> Code </a> 
+                   <!-- | <a href="./assets/images/CoCLR-poster-NeurIPS20.pdf"> Poster </a>  -->
+                   | <a href="https://www.youtube.com/watch?v=77dcM9CyHCY"> Video </a> 
+                   <!-- | <a href="http://www.robots.ox.ac.uk/~vgg/publications/2019/Han20/"> All </a> -->
+                    </div>
+
+                    <div style="display: none;" class="BibtexExpand" id="BibHan22">
+                    <div style="width:500px;overflow:visible;">
+                    <pre class="bibtex" style="font-size:12px">
+@InProceedings{Han22,
+author       = "Tengda Han and Weidi Xie and Andrew Zisserman",
+title        = "Temporal Alignment Networks for Long-term Video",
+booktitle    = "CVPR",
+year         = "2022",
+}
+                    </pre>
+                    </div>
+                    </div>
+
+                    </span>
+                </td>
+
+          </tr>
+      </table>
+<br><br>
+
+<hr>
+<center><h1 id="dataset-summary">Dataset Summary
+  <a href="https://www.robots.ox.ac.uk/~vgg/research/tan/#dataset-summary" style="font-size: 80%">&#182;</a>
+</h1></center>
+<ul>
+  <li>Evaluation Dataset:
+    <ul><li style="margin-top:10px;"><a href="#htm-align"><b>HTM-Align</b></a></li></ul>
+  </li>
+  <br>
+  <li>Training Dataset:
+    <table id="mytable">
+      <tr>
+        <td><b>Activity Category</b></td>
+        <td><a href="#htm-sentencify"><b>Sentencified HTM</b></a></td>
+        <td><a href="#htm-aa"><b>HTM-AA</b></a></td>
+      </tr>
+      <tr>
+        <td>Food & Entertaining</td>
+        <td>HTM-370K [&#x2714]</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td rowspan="2">All</td>
+        <td rowspan="2">HTM-1.2M [&#x2714]</td>
+        <td>HTM-AA-v1 (25% subset) [&#x2714]</td>
+      </tr>
+      <tr>
+        <td>HTM-AA-v2 (full set) [&#x2714]</td>
+      </tr>
+    </table>
+    <center><object data="assets/pipeline.svg" width=80% style="margin-top:20px;margin-bottom:30px;"> </object></center>
+  </li>
+  <br>
+  <li>Meta Data:
+    <ul><li style="margin-top:10px;">
+      <b>HowTo100M video titles</b> (77MB json)
+      <a href="http://www.robots.ox.ac.uk/~htd/tan/howto100m_vid_to_title.json"><b>[Download]</b></a>
+    </li></ul>
+  </li>
+</ul>
 
 
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+<hr> 
+<center><h1 id="htm-align">Dataset: HTM-Align
+  <a href="https://www.robots.ox.ac.uk/~vgg/research/tan/#htm-align" style="font-size: 80%">&#182;</a>
+</h1></center>
+<p><b>HTM-Align</b> is a <b>manually annotated</b>
+80-video subset of HowTo100M (HTM) dataset, 
+to evaluate the alignment performance.
+It is a test set randomly sampled from Food & Entertaining category of HTM.
+These videos are not used for any training.
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+<p>For a video from the HTM dataset, the annotators
+<ul>
+  <li>(1) annotate if the sentence from ASR is visually alignable with the video,</li>
+  <li>(2) if alignable, change the start & end timestamps of the sentence to align with the visual content.</li>
+</ul></p>
 
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+<center><p>
+    <a href="http://www.robots.ox.ac.uk/~htd/tan/htm_align.json"> Download HTM-Align (616KB json) </a>
+  | <a href="https://github.com/TengdaHan/TemporalAlignNet/tree/main/htm_align"> Instruction </a>
+</p></center>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+<center>
+  <img src="assets/video_example.png" alt="anno_example" style="width: 80%; object-fit: cover; max-width:100%;"></a>
+</center>
 
-    <!-- End of Statcounter Code -->
+<br>
 
-  </body>
-  </html>
+<hr> 
+<center><h1 id="htm-aa">Dataset: HTM-AA 
+  <a href="https://www.robots.ox.ac.uk/~vgg/research/tan/#htm-aa" style="font-size: 80%">&#182;</a>
+</h1></center>
+
+<p><b>HTM-AA</b> means Auto-Aligned (AA) version of HowTo100M (HTM) dataset.
+It is an output of our Temporal Alignment Networks and a final goal of this project.
+HTM-AA is a large-scale <b>paired video-text dataset</b>, automatically obtained without any human annotation.
+In our paper Table 4, we show it can improve the backbone visual representation.
+</p>
+
+<p>For a video from the HowTo100M dataset, 
+HTM-AA provides: 
+<ul>
+  <li>(1) the visually alignable sentences taken from the YouTube ASR,</li>
+  <li>(2) their corresponding video timestamps (in second).</li>
+</ul>
+</p>
+<p>
+
+<p>We provide <u>HTM-AA version-1</u> which contains 247,564 HTM videos (about 25% subset of the entire HTM).
+This subset is used in our paper Table 4 and Appendix D.1.
+</p>  
+
+<p><dev style="color:red"><b>[NEW]</b></dev> We provide <u>HTM-AA version-2</u> which contains 1,187,123 HTM videos (about 99% of the entire HTM).
+Additionally, we provide the full model outputs including the alignability scores and visual-textual similarity scores of <b>all sentences</b> for future research.
+</p>
+
+<center><p>
+  Download: 
+  <a href="http://www.robots.ox.ac.uk/~htd/tan/htm_aa_v2.csv"> HTM-AA-v2 (2.9GB csv) </a>
+  | <a href="http://www.robots.ox.ac.uk/~htd/tan/htm_aa_v2_full.tar"> HTM-AA-v2 (full outputs, 7.5GB tar) </a>
+  | <a href="http://www.robots.ox.ac.uk/~htd/tan/htm_aa_v1.csv"> HTM-AA-v1 (329MB csv) </a>
+</p></center>
+
+<center><p>
+<a href="htm_aa_stats.html"> Statistics </a>
+  | <a href="https://github.com/TengdaHan/TemporalAlignNet/tree/main/htm_aa"> Instruction </a>
+</p></center>
+
+<br>
+<center>
+  <a href="htm_aa_stats.html">
+  <img src="assets/wordcloud.png" alt="wordcloud" style="width: 90%; object-fit: cover; max-width:100%;"></a>
+  </a>
+</center>
+
+<hr> 
+<center><h1 id="htm-sentencify">Dataset: Sentencified HTM
+  <a href="https://www.robots.ox.ac.uk/~vgg/research/tan/#htm-sentencify" style="font-size: 80%">&#182;</a>
+</h1></center>
+
+<p><b>Sentencified HTM</b> 
+is the original <a href="https://www.di.ens.fr/willow/research/howto100m/">HowTo100M</a> (HTM) dataset, 
+except the YouTube ASR (Automatic Speech Recognition) texts are converted to <b>full sentences</b>
+using the method <a href="https://github.com/TengdaHan/TemporalAlignNet/tree/main/sentencify_text">here</a>.</p>
+<p>For a video from the HowTo100M dataset, Sentencified HTM provides:
+<ul>
+  <li>(1) all of the ASR <b>sentences</b> from the YouTube,</li>
+  <li>(2) the <b>original</b> start & end timestamps for each sentence (in second).</li>
+</ul>
+</p>
+
+<p>We provide two versions, a subset and the fullset:
+<ul>
+  <li><b>HTM-370K</b>: from the "Food & Entertaining" category. 
+    <center><p>
+      <a href="http://www.robots.ox.ac.uk/~htd/tan/sentencified_htm_370k.json"> Download HTM-370K (3.2GB json) </a>
+    | <a href="http://www.robots.ox.ac.uk/~htd/tan/htm370k_vids.txt.download"  download="htm370k_vids.txt"> Download HTM-370K video-IDs (4.5MB txt) </a>
+    | <a href="htm_sentencify_stats.html"> Statistics </a>
+  </p></center>
+  </li>
+  <li><b>HTM-1.2M</b>: from all the activity categories. 
+  </li>
+</ul>
+<center><p>
+    <a href="http://www.robots.ox.ac.uk/~htd/tan/sentencified_htm_1200k.json"> Download HTM-1.2M (9.9GB json) </a>
+  | <a href="http://www.robots.ox.ac.uk/~htd/tan/htm1200k_vids.txt"> Download HTM-1.2M video-IDs (14.3MB txt) </a>
+  | <a href="htm_sentencify_stats.html"> Statistics </a>
+</p></center>
+
+</p>
+
+<br><br>
+<hr>
+<center><h1>Acknowledgements</h1></center>
+Funding for this research is provided by EPSRC
+Programme Grant VisualAI EP/T028572/1, 
+a Royal Society Research Professorship RP\R1\191132 and
+a Google-DeepMind Graduate Scholarship.
+We thank Charig Yang, Guanqi Zhan and Chuhan Zhang for proof-reading.
+
+<br><br>
+<br><br>
+
+<p style="text-align:center;font-size:14px;">
+    Webpage template modified from <a href="https://richzhang.github.io/splitbrainauto/">Richard Zhang</a>.
+</p>
+
+
+</body>
+</html>

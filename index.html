@@ -97,19 +97,25 @@
 			  </table>
           </center>
   		  <br>
-	
-    <center>
-      <div class="container">
-        <div class="row">
-          <center>
-            <img src="naive_framework4.png" alt="ProMaC-figure" style="width: 80%; object-fit: cover; max-width:80%;"></a>
-          </center>
-          </div>
-    </center>
-  </center>
+
+	<table align=center width=800px>
+  			  <tr>
+  	              <td width=400px>
+  					<center>
+  	                	<img class="rounded" src = "naive_framework4.png" height="125px"></img>
+  	                	<br>
+					</center>
+  	              </td>
+                </tr>
+  	              <td width=400px>
+  					</center>
+  	              </td>
+  		  </table>
+
+  		  <br>
             
-<hr>
-<center><h1>Abstract</h1></center>
+<table align=center width=900px>
+ <center><h1>Abstract</h1></center>
 <div align="justify">
   <p>
 Promptable segmentation typically requires instance-specific manual prompts to guide the segmentation of each desired object.To minimize such a need, task-generic promptable segmentation has been introduced, which employs a single task-generic prompt to segment various images of different objects in the same task.Current methods use Multimodal Large Language Models (MLLMs) to reason detailed instance-specific prompts from a task-generic prompt for improving segmentation accuracy. The effectiveness of this segmentation heavily depends on the precision of these derived prompts. However, MLLMs often suffer hallucinations during reasoning, resulting in inaccurate prompting. While existing methods focus on eliminating hallucinations to improve a model, we argue that MLLM hallucinations can reveal valuable contextual insights when leveraged correctly, as they represent pre-trained large-scale knowledge beyond individual images.

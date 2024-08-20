@@ -219,13 +219,14 @@ Experiments on 5 benchmarks demonstrate the effectiveness of ProMaC.</p>
             <center>
                 <figure>
                     <img class="rounded" src="framework_ProMaC_v10.png" height="320px" />
-                    <figcaption>ProMaC consists of a prompt generator and a mask generator for cyclical optimization. The prompt generator employs multi-scale chain-of-thought prompting. It initially use hallucinations for exploring task-related information within image patches. It identifies task-relevant objects and their backgrounds ($A^k_{\text{fore}}$, $A^k_{\text{back}}$) along with their locations ($B^k$). Subsequently, it uses visual contrastive reasoning to refine and finalize instance-specific prompts ($A^u_i$, $B^u_i$) by eliminating hallucinations. The mask generator then processes these prompts into the segmentation model ("Seg"), producing a mask aligned with task semantics. This mask further guides the visual contrastive reasoning process, which leverages an inpainting model to eliminate masked regions, creating contrastive images. These images enable the prompt generator to further refine its prompts, enhancing segmentation accuracy.</figcaption>
+                    <figcaption style="text-align: justify;">
+    ProMaC consists of a prompt generator and a mask generator for cyclical optimization. The prompt generator employs multi-scale chain-of-thought prompting. It initially uses hallucinations for exploring task-related information within image patches. It identifies task-relevant objects and their backgrounds (A<sup>k</sup><sub>fore</sub>, A<sup>k</sup><sub>back</sub>) along with their locations (B<sup>k</sup>). Subsequently, it uses visual contrastive reasoning to refine and finalize instance-specific prompts (A<sup>u</sup><sub>i</sub>, B<sup>u</sup><sub>i</sub>) by eliminating hallucinations...
+</figcaption>
                 </figure>
                 <br>
             </center>
         </td>
         <td width="400px">
-            <!-- 其他单元格内容 -->
         </td>
     </tr>
 </table>

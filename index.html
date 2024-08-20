@@ -231,172 +231,24 @@ Experiments on 5 benchmarks demonstrate the effectiveness of ProMaC.</p>
             	  <hr>
 <table align=center width=1600px>
 
-<center><h1 id="dataset-summary">Dataset Summary
-  <a href="https://www.robots.ox.ac.uk/~vgg/research/tan/#dataset-summary" style="font-size: 80%">&#182;</a>
-</h1></center>
-<ul>
-  <li>Evaluation Dataset:
-    <ul><li style="margin-top:10px;"><a href="#htm-align"><b>HTM-Align</b></a></li></ul>
-  </li>
-  <br>
-  <li>Training Dataset:
-    <table id="mytable">
-      <tr>
-        <td><b>Activity Category</b></td>
-        <td><a href="#htm-sentencify"><b>Sentencified HTM</b></a></td>
-        <td><a href="#htm-aa"><b>HTM-AA</b></a></td>
-      </tr>
-      <tr>
-        <td>Food & Entertaining</td>
-        <td>HTM-370K [&#x2714]</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td rowspan="2">All</td>
-        <td rowspan="2">HTM-1.2M [&#x2714]</td>
-        <td>HTM-AA-v1 (25% subset) [&#x2714]</td>
-      </tr>
-      <tr>
-        <td>HTM-AA-v2 (full set) [&#x2714]</td>
-      </tr>
-    </table>
-    <center><object data="assets/pipeline.svg" width=80% style="margin-top:20px;margin-bottom:30px;"> </object></center>
-  </li>
-  <br>
-  <li>Meta Data:
-    <ul><li style="margin-top:10px;">
-      <b>HowTo100M video titles</b> (77MB json)
-      <a href="http://www.robots.ox.ac.uk/~htd/tan/howto100m_vid_to_title.json"><b>[Download]</b></a>
-    </li></ul>
-  </li>
-</ul>
+<center><h1>Visulization</h1></center>
+	<table align=center width=800px>
+  			  <tr>
+  	              <td width=400px>
+  					<center>
+  	                	<img class="rounded" src = "visulization_n.png" height="300px"></img>
+  	                	<br>
+					</center>
+  	              </td>
+                </tr>
+  	              <td width=400px>
+  					</center>
+  	              </td>
+  		  </table>
 
-
-<hr> 
-<center><h1 id="htm-align">Dataset: HTM-Align
-  <a href="https://www.robots.ox.ac.uk/~vgg/research/tan/#htm-align" style="font-size: 80%">&#182;</a>
-</h1></center>
-<p><b>HTM-Align</b> is a <b>manually annotated</b>
-80-video subset of HowTo100M (HTM) dataset, 
-to evaluate the alignment performance.
-It is a test set randomly sampled from Food & Entertaining category of HTM.
-These videos are not used for any training.
-
-<p>For a video from the HTM dataset, the annotators
-<ul>
-  <li>(1) annotate if the sentence from ASR is visually alignable with the video,</li>
-  <li>(2) if alignable, change the start & end timestamps of the sentence to align with the visual content.</li>
-</ul></p>
-
-<center><p>
-    <a href="http://www.robots.ox.ac.uk/~htd/tan/htm_align.json"> Download HTM-Align (616KB json) </a>
-  | <a href="https://github.com/TengdaHan/TemporalAlignNet/tree/main/htm_align"> Instruction </a>
-</p></center>
-
-<center>
-  <img src="assets/video_example.png" alt="anno_example" style="width: 80%; object-fit: cover; max-width:100%;"></a>
-</center>
-
-<br>
-
-<hr> 
-<center><h1 id="htm-aa">Dataset: HTM-AA 
-  <a href="https://www.robots.ox.ac.uk/~vgg/research/tan/#htm-aa" style="font-size: 80%">&#182;</a>
-</h1></center>
-
-<p><b>HTM-AA</b> means Auto-Aligned (AA) version of HowTo100M (HTM) dataset.
-It is an output of our Temporal Alignment Networks and a final goal of this project.
-HTM-AA is a large-scale <b>paired video-text dataset</b>, automatically obtained without any human annotation.
-In our paper Table 4, we show it can improve the backbone visual representation.
-</p>
-
-<p>For a video from the HowTo100M dataset, 
-HTM-AA provides: 
-<ul>
-  <li>(1) the visually alignable sentences taken from the YouTube ASR,</li>
-  <li>(2) their corresponding video timestamps (in second).</li>
-</ul>
-</p>
-<p>
-
-<p>We provide <u>HTM-AA version-1</u> which contains 247,564 HTM videos (about 25% subset of the entire HTM).
-This subset is used in our paper Table 4 and Appendix D.1.
-</p>  
-
-<p><dev style="color:red"><b>[NEW]</b></dev> We provide <u>HTM-AA version-2</u> which contains 1,187,123 HTM videos (about 99% of the entire HTM).
-Additionally, we provide the full model outputs including the alignability scores and visual-textual similarity scores of <b>all sentences</b> for future research.
-</p>
-
-<center><p>
-  Download: 
-  <a href="http://www.robots.ox.ac.uk/~htd/tan/htm_aa_v2.csv"> HTM-AA-v2 (2.9GB csv) </a>
-  | <a href="http://www.robots.ox.ac.uk/~htd/tan/htm_aa_v2_full.tar"> HTM-AA-v2 (full outputs, 7.5GB tar) </a>
-  | <a href="http://www.robots.ox.ac.uk/~htd/tan/htm_aa_v1.csv"> HTM-AA-v1 (329MB csv) </a>
-</p></center>
-
-<center><p>
-<a href="htm_aa_stats.html"> Statistics </a>
-  | <a href="https://github.com/TengdaHan/TemporalAlignNet/tree/main/htm_aa"> Instruction </a>
-</p></center>
-
-<br>
-<center>
-  <a href="htm_aa_stats.html">
-  <img src="assets/wordcloud.png" alt="wordcloud" style="width: 90%; object-fit: cover; max-width:100%;"></a>
-  </a>
-</center>
-
-<hr> 
-<center><h1 id="htm-sentencify">Dataset: Sentencified HTM
-  <a href="https://www.robots.ox.ac.uk/~vgg/research/tan/#htm-sentencify" style="font-size: 80%">&#182;</a>
-</h1></center>
-
-<p><b>Sentencified HTM</b> 
-is the original <a href="https://www.di.ens.fr/willow/research/howto100m/">HowTo100M</a> (HTM) dataset, 
-except the YouTube ASR (Automatic Speech Recognition) texts are converted to <b>full sentences</b>
-using the method <a href="https://github.com/TengdaHan/TemporalAlignNet/tree/main/sentencify_text">here</a>.</p>
-<p>For a video from the HowTo100M dataset, Sentencified HTM provides:
-<ul>
-  <li>(1) all of the ASR <b>sentences</b> from the YouTube,</li>
-  <li>(2) the <b>original</b> start & end timestamps for each sentence (in second).</li>
-</ul>
-</p>
-
-<p>We provide two versions, a subset and the fullset:
-<ul>
-  <li><b>HTM-370K</b>: from the "Food & Entertaining" category. 
-    <center><p>
-      <a href="http://www.robots.ox.ac.uk/~htd/tan/sentencified_htm_370k.json"> Download HTM-370K (3.2GB json) </a>
-    | <a href="http://www.robots.ox.ac.uk/~htd/tan/htm370k_vids.txt.download"  download="htm370k_vids.txt"> Download HTM-370K video-IDs (4.5MB txt) </a>
-    | <a href="htm_sentencify_stats.html"> Statistics </a>
-  </p></center>
-  </li>
-  <li><b>HTM-1.2M</b>: from all the activity categories. 
-  </li>
-</ul>
-<center><p>
-    <a href="http://www.robots.ox.ac.uk/~htd/tan/sentencified_htm_1200k.json"> Download HTM-1.2M (9.9GB json) </a>
-  | <a href="http://www.robots.ox.ac.uk/~htd/tan/htm1200k_vids.txt"> Download HTM-1.2M video-IDs (14.3MB txt) </a>
-  | <a href="htm_sentencify_stats.html"> Statistics </a>
-</p></center>
-
-</p>
-
-<br><br>
-<hr>
-<center><h1>Acknowledgements</h1></center>
-Funding for this research is provided by EPSRC
-Programme Grant VisualAI EP/T028572/1, 
-a Royal Society Research Professorship RP\R1\191132 and
-a Google-DeepMind Graduate Scholarship.
-We thank Charig Yang, Guanqi Zhan and Chuhan Zhang for proof-reading.
-
-<br><br>
-<br><br>
-
-<p style="text-align:center;font-size:14px;">
-    Webpage template modified from <a href="https://richzhang.github.io/splitbrainauto/">Richard Zhang</a>.
-</p>
+  		  <br>
+            	  <hr>
+<table align=center width=1600px>
 
 
 </body>
